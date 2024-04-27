@@ -1,5 +1,5 @@
 export function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <div data-testid="about-page">AboutPage</div>
   )
 }
