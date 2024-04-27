@@ -1,5 +1,3 @@
 export function AboutPage() {
-  return (
-    <div data-testid="about-page">AboutPage</div>
-  )
+  return <div data-testid="about-page">AboutPage</div>;
 }

@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 type ContentLayout = {
   children: ReactNode;
 };
 
 export function ContentLayout({ children }: ContentLayout) {
-  return <div className="w-full px-4 flex mt-20 flex-col">{children}</div>;
+  return <div className="mt-20 flex w-full flex-col px-4">{children}</div>;
 }
