@@ -1,5 +1,3 @@
 export function ContactPage() {
-  return (
-    <div>ContactPage</div>
-  )
+  return <div>ContactPage</div>;
 }

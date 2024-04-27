@@ -1,7 +1,7 @@
 @layer tailwind-base, primereact, tailwind-utilities;
 
-/* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
-@import 'primereact/resources/themes/lara-light-blue/theme.css' layer(primereact);
+/* IMPORTANT: Styled mode you must add the PrimeReact Theme here. Do not include in unstyled mode */
+@import 'primereact/resources/themes/arya-orange/theme.css' layer(primereact);
 
 @layer tailwind-base {
   @tailwind base;
@@ -12,11 +12,20 @@
   @tailwind utilities;
 }
 
-body,
-html {
-  @apply font-[Inter];
+:root {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 #root {
-  @apply min-h-screen flex flex-col justify-center items-center bg-gray-100 text-gray-900;
+  @apply flex min-h-screen flex-col items-center justify-center bg-gray-100 font-[Inter] text-gray-900;
 }

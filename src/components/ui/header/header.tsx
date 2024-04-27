@@ -1,35 +1,35 @@
-import { useSessionStore } from '@/store'
-import { useEffect, useRef, useState } from 'react'
-import { BiDownArrow, BiUpArrow } from 'react-icons/bi'
+import { useSessionStore } from '@/store';
+import { useEffect, useRef, useState } from 'react';
+import { BiDownArrow, BiUpArrow } from 'react-icons/bi';
 
 type HeaderProps = {
-  toggleSidebar: () => void
-}
+  toggleSidebar: () => void;
+};
 
 export function Header({ toggleSidebar }: HeaderProps) {
-  const [userSettingsExpand, setUserSettingsExpand] = useState(false)
-  const headerRef = useRef<HTMLDivElement>(null)
-  const { username, profile } = useSessionStore()
+  const [userSettingsExpand, setUserSettingsExpand] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const { username, profile } = useSessionStore();
 
   const toggleUserSettings = () => {
-    setUserSettingsExpand(!userSettingsExpand)
-  }
+    setUserSettingsExpand(!userSettingsExpand);
+  };
 
   const handleClickOutside = (event: MouseEvent) => {
     if (
       headerRef.current &&
       !headerRef.current.contains(event.target as Node)
     ) {
-      setUserSettingsExpand(false)
+      setUserSettingsExpand(false);
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-[#222]">
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
@@ -128,5 +128,5 @@ export function Header({ toggleSidebar }: HeaderProps) {
         </div>
       </div>
     </nav>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { BiExit, BiHelpCircle, BiHomeAlt, BiUserCircle } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { BiExit, BiHelpCircle, BiHomeAlt, BiUserCircle } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 type SidebarProps = {
   toggleSidebar: () => void;
@@ -10,22 +10,26 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
   return (
     <aside
       id="separator-sidebar"
-      className={`md:flex top-0 left-0 z-40 w-64 h-screen transition-transform ${expanded
-        ? "flex translate-x-0"
-        : "hidden  -translate-x-full sm:translate-x-0"
-        }`}
+      className={`left-0 top-0 z-40 h-screen w-64 transition-transform md:inline-flex ${
+        expanded
+          ? 'flex translate-x-0'
+          : 'hidden  -translate-x-full sm:translate-x-0'
+      }`}
       aria-label="Sidebar"
     >
-      <div className="flex flex-col justify-between h-full">
-        <div className="px-3 py-4 h-full overflow-y-auto bg-gray-50 dark:bg-[#222]" onClick={toggleSidebar}>
+      <div className="flex h-full flex-col justify-between">
+        <div
+          className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-[#222]"
+          onClick={toggleSidebar}
+        >
           <ul className="space-y-2 font-medium">
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
-                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -40,36 +44,36 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
             <li>
               <Link
                 to="/"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <BiHomeAlt />
-                <span className="flex-1 ms-3 whitespace-nowrap">Home</span>
+                <span className="ms-3 flex-1 whitespace-nowrap">Home</span>
               </Link>
             </li>
             <li>
               <Link
                 to="/contact"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <BiUserCircle />
-                <span className="flex-1 ms-3 whitespace-nowrap">Contact</span>
+                <span className="ms-3 flex-1 whitespace-nowrap">Contact</span>
               </Link>
             </li>
             <li>
               <Link
                 to="/about"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <BiHelpCircle />
-                <span className="flex-1 ms-3 whitespace-nowrap">About</span>
+                <span className="ms-3 flex-1 whitespace-nowrap">About</span>
               </Link>
             </li>
           </ul>
         </div>
-        <div className="px-3 py-4 bg-gray-50 dark:bg-[#222]">
+        <div className="bg-gray-50 px-3 py-4 dark:bg-[#222]">
           <a
             href="#"
-            className="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
+            className="group flex items-center rounded-lg p-2 text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
           >
             <BiExit />
             <span className="ms-3">Sign Out</span>

@@ -1,2 +1,2 @@
-import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/arya-orange/theme.css";
 import "primeicons/primeicons.css";
