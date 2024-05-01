@@ -45,7 +45,7 @@ export function TabNew() {
       </div>
       <div className="mt-12 flex items-center justify-end gap-12">
         <Button
-          label="Cancelar"
+          label="Descartar"
           link
           className="border border-b-orange-400 p-0 text-orange-400"
         />

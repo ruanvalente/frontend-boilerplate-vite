@@ -38,7 +38,6 @@ export function HomePage() {
           model={items}
           activeIndex={activeIndex}
           onTabChange={(e) => setActiveIndex(e.index)}
-          className="text-orange-400"
         />
         {renderActiveView(activeIndex)}
       </TabMenuStyledWrapper>
