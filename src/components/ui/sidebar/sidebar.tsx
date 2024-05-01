@@ -19,7 +19,7 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
     >
       <div className="flex h-full flex-col justify-between">
         <div
-          className="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-[#222]"
+          className="overflow-y-autopx-3 h-full bg-[#222] py-4"
           onClick={toggleSidebar}
         >
           <ul className="space-y-2 font-medium">
@@ -44,7 +44,7 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
             <li>
               <Link
                 to="/"
-                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
               >
                 <BiHomeAlt />
                 <span className="ms-3 flex-1 whitespace-nowrap">Home</span>
@@ -53,7 +53,7 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
             <li>
               <Link
                 to="/contact"
-                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
               >
                 <BiUserCircle />
                 <span className="ms-3 flex-1 whitespace-nowrap">Contact</span>
@@ -62,7 +62,7 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
             <li>
               <Link
                 to="/about"
-                className="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
               >
                 <BiHelpCircle />
                 <span className="ms-3 flex-1 whitespace-nowrap">About</span>
@@ -70,14 +70,10 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
             </li>
           </ul>
         </div>
-        <div className="bg-gray-50 px-3 py-4 dark:bg-[#222]">
-          <a
-            href="#"
-            className="group flex items-center rounded-lg p-2 text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-          >
+        <div className="bg-[#222] px-3 py-4" onClick={toggleSidebar}>
+          <div className="group flex items-center rounded-lg p-2 text-white transition duration-75 hover:bg-gray-900">
             <BiExit />
-            <span className="ms-3">Sign Out</span>
-          </a>
+          </div>
         </div>
       </div>
     </aside>

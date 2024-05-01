@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 // CSS styles
 import { PrimeReactProvider } from 'primereact/api';
-import '@/theme/tailwindcss';
-import '@/lib/primereact';
+import './main.css';
 
 import { App } from './App';
 

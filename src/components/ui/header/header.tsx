@@ -31,7 +31,7 @@ export function Header({ toggleSidebar }: HeaderProps) {
     };
   }, []);
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-[#222]">
+    <nav className="fixed top-0 z-50 w-full bg-[#222]">
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div
@@ -62,7 +62,7 @@ export function Header({ toggleSidebar }: HeaderProps) {
               </svg>
             </button>
             <a href="#" className="ms-2 flex md:me-24">
-              <span className="self-center whitespace-nowrap text-xl font-semibold sm:text-2xl dark:text-white">
+              <span className="self-center whitespace-nowrap text-xl font-semibold text-white sm:text-2xl">
                 Logo
               </span>
             </a>
