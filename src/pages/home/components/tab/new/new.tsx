@@ -1,3 +1,4 @@
+import { Input } from '@/components/ui/input';
 import { Button } from 'primereact/button';
 import { Tooltip } from 'primereact/tooltip';
 
@@ -11,7 +12,6 @@ export function TabNew() {
         </p>
         <>
           <Tooltip target=".custom-target-icon" />
-
           <i
             className="custom-target-icon pi pi-info-circle p-text-secondary p-overlay-badge cursor-pointer font-semibold"
             data-pr-tooltip="Mensagem"
@@ -23,10 +23,10 @@ export function TabNew() {
         </>
       </div>
       <div className="relative">
-        <input
+        <Input
           type="file"
-          className="mt-4 block w-full  rounded-lg border-b-2 border-b-orange-400 bg-orange-50 p-2.5 text-sm text-gray-900 transition-all duration-500 focus:border-orange-500 focus:outline-none focus:ring-orange-500"
-          placeholder="Selecionar arquivo"
+          placeholder="Selecionar arquivo...."
+          readOnly
           required
         />
         <i className="pi pi-upload absolute right-4 top-4 font-semibold"></i>

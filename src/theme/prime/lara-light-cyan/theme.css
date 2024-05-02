@@ -2601,7 +2601,7 @@
   .p-button:focus {
     outline: 0 none;
     outline-offset: 0;
-    box-shadow: 0 0 0 0.2rem #a5f3fc;
+    box-shadow: 0 0 0 0.2rem #fb923c;
   }
   .p-button .p-button-label {
     transition-duration: 0.2s;
