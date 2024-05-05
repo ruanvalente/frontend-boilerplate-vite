@@ -11,8 +11,6 @@ export function useListener<T>(eventType: string): T | null {
         setEventData(event.detail);
       }
     };
-    console.log('eventData', eventData);
-    console.log('eventType', eventType);
     window.addEventListener(eventType, handleEvent);
 
     return () => {

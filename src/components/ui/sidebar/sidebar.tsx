@@ -1,5 +1,5 @@
 import { BiExit, BiMap } from 'react-icons/bi';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 type SidebarProps = {
   toggleSidebar: () => void;
