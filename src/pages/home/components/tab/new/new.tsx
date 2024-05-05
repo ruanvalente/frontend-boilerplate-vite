@@ -8,7 +8,7 @@ export function TabNew() {
       <div className="flex items-center justify-between gap-2 px-4">
         <p className="text-gray-500">
           Enviar aquivo para solicitação <br />
-          de bloqueio ou desbloqueio
+          de bloqueio ou desbloqueio.
         </p>
         <>
           <Tooltip target=".custom-target-icon" />

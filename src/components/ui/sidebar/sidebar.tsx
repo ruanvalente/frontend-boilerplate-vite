@@ -1,5 +1,5 @@
-import { BiExit, BiHelpCircle, BiHomeAlt, BiUserCircle } from 'react-icons/bi';
-import { Link } from 'react-router-dom';
+import { BiExit, BiMap } from 'react-icons/bi';
+import { Link, NavLink } from 'react-router-dom';
 
 type SidebarProps = {
   toggleSidebar: () => void;
@@ -19,7 +19,7 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
     >
       <div className="flex h-full flex-col justify-between">
         <div
-          className="overflow-y-autopx-3 h-full bg-[#222] py-4"
+          className="overflow-y-autopx-3 h-full bg-[#222] py-4 md:w-[100px]"
           onClick={toggleSidebar}
         >
           <ul className="space-y-2 font-medium">
@@ -42,38 +42,31 @@ export function Sidebar({ toggleSidebar, expanded }: SidebarProps) {
               </a>
             </li>
             <li>
-              <Link
-                to="/"
-                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
-              >
-                <BiHomeAlt />
-                <span className="ms-3 flex-1 whitespace-nowrap">Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
-              >
-                <BiUserCircle />
-                <span className="ms-3 flex-1 whitespace-nowrap">Contact</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className="group flex items-center rounded-lg p-2 text-white hover:bg-gray-900 "
-              >
-                <BiHelpCircle />
-                <span className="ms-3 flex-1 whitespace-nowrap">About</span>
-              </Link>
+              <div className="divide-y divide-yellow-300">
+                <div></div>
+                <NavLink
+                  to="/"
+                  className="group flex items-center p-2 text-white hover:bg-gray-900 active:text-yellow-300 md:justify-center"
+                >
+                  <BiMap />
+                  <span className="ms-3 w-[100px] flex-1 truncate text-ellipsis whitespace-nowrap md:hidden">
+                    Qualificação de viabilidade
+                  </span>
+                </NavLink>
+                <div></div>
+              </div>
             </li>
           </ul>
         </div>
-        <div className="bg-[#222] px-3 py-4" onClick={toggleSidebar}>
-          <div className="group flex items-center rounded-lg p-2 text-white transition duration-75 hover:bg-gray-900">
+        <div
+          className="w-full divide-y divide-yellow-300 bg-[#222]  py-4"
+          onClick={toggleSidebar}
+        >
+          <div></div>
+          <div className="group flex items-center p-2 text-white transition duration-75 hover:bg-gray-900 md:justify-center">
             <BiExit />
           </div>
+          <div></div>
         </div>
       </div>
     </aside>

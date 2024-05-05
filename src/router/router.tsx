@@ -1,5 +1,4 @@
-import { AboutPage } from '@/pages/about';
-import { ContactPage } from '@/pages/contact';
+import { TabBlock, TabHistory } from '@/pages/home/components/tab';
 import { HomePage } from '@/pages/home/home';
 import { Layouts } from '@/shared/layouts';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
@@ -18,8 +17,8 @@ export function AppRouter() {
       <Routes>
         <Route element={<LayoutRouterWrapper />}>
           <Route index element={<HomePage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="block" element={<TabBlock />} />
+          <Route path="history" element={<TabHistory />} />
         </Route>
       </Routes>
     </BrowserRouter>
