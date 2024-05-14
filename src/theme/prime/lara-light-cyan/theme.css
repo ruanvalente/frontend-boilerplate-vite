@@ -919,8 +919,8 @@
     height: 14px;
   }
   .p-checkbox.p-highlight .p-checkbox-box {
-    border-color: #06b6d4;
-    background: #06b6d4;
+    border-color: #fb9c23;
+    background: #fb9c23;
   }
   .p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) .p-checkbox-box {
     border-color: #06b6d4;
@@ -1813,23 +1813,22 @@
   }
   .p-multiselect {
     background: #ffffff;
-    border: 1px solid #d1d5db;
+    border: 1px solid #222;
     transition:
       background-color 0.2s,
       color 0.2s,
-      border-color 0.2s,
-      box-shadow 0.2s;
+      border-color 0.2s;
     border-radius: 6px;
     outline-color: transparent;
   }
   .p-multiselect:not(.p-disabled):hover {
-    border-color: #06b6d4;
+    border-color: #222;
   }
   .p-multiselect:not(.p-disabled).p-focus {
     outline: 0 none;
     outline-offset: 0;
-    box-shadow: 0 0 0 0.2rem #a5f3fc;
-    border-color: #06b6d4;
+    box-shadow: none;
+    border-color: #222;
   }
   .p-multiselect.p-variant-filled {
     background: #f3f4f6;
@@ -1954,13 +1953,13 @@
     margin-bottom: 0;
   }
   .p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
-    color: #0e7490;
-    background: #ecfeff;
+    color: #222;
+    background: #fdba74;
   }
   .p-multiselect-panel
     .p-multiselect-items
     .p-multiselect-item.p-highlight.p-focus {
-    background: rgba(6, 182, 212, 0.24);
+    background: #ffe5c9;
   }
   .p-multiselect-panel
     .p-multiselect-items
